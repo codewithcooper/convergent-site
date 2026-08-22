@@ -1,0 +1,142 @@
+/* Image scale tuning: keep photography editorial, not oversized */
+
+.ep-hero {
+  min-height: 0;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 72px 5vw 84px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.72fr);
+  gap: clamp(42px, 5vw, 88px);
+  align-items: center;
+}
+
+.ep-hero-copy {
+  padding: 0;
+}
+
+.ep-hero-image {
+  min-height: 0;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 4 / 5;
+  justify-self: end;
+  align-self: center;
+}
+
+.ep-hero-image img {
+  object-position: 50% 34%;
+}
+
+.ep-people {
+  padding: 24px 0;
+}
+
+.ep-person-row,
+.ep-person-row.reverse {
+  width: min(1360px, 100%);
+  min-height: 0;
+  margin: 0 auto;
+  padding: 88px 6vw;
+  grid-template-columns: minmax(300px, 430px) minmax(0, 1fr);
+  gap: clamp(54px, 7vw, 110px);
+  align-items: center;
+  background: transparent;
+}
+
+.ep-person-row.reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+}
+
+.ep-person-row.reverse .ep-person-copy {
+  background: transparent;
+}
+
+.ep-person-image {
+  min-height: 0;
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1 / 1;
+  justify-self: center;
+}
+
+.ep-person-image img,
+.ep-bethany-image img {
+  object-position: 50% 38%;
+}
+
+.ep-person-copy {
+  padding: 0;
+}
+
+.ep-person-copy h2 {
+  max-width: 760px;
+  font-size: clamp(46px, 4.6vw, 76px);
+}
+
+.ep-person-page-hero,
+.ep-person-page-hero.bethany {
+  min-height: 0;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 90px 6vw;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+  gap: clamp(54px, 7vw, 110px);
+  align-items: center;
+}
+
+.ep-person-page-copy {
+  padding: 0;
+}
+
+.ep-person-page-image {
+  min-height: 0;
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1 / 1;
+  justify-self: end;
+}
+
+.ep-person-page-image img,
+.ep-person-page-hero.bethany .ep-person-page-image img {
+  object-position: 50% 38%;
+}
+
+@media (max-width: 900px) {
+  .ep-hero {
+    padding: 54px 6vw 64px;
+    grid-template-columns: 1fr;
+  }
+
+  .ep-hero-image {
+    width: min(100%, 460px);
+    justify-self: center;
+    aspect-ratio: 4 / 5;
+  }
+
+  .ep-person-row,
+  .ep-person-row.reverse,
+  .ep-person-page-hero,
+  .ep-person-page-hero.bethany {
+    padding: 66px 6vw;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .ep-person-row.reverse .ep-person-image,
+  .ep-person-row.reverse .ep-person-copy {
+    order: initial;
+  }
+
+  .ep-person-image,
+  .ep-person-page-image {
+    width: min(100%, 360px);
+    max-width: 360px;
+    justify-self: center;
+    aspect-ratio: 1 / 1;
+  }
+
+  .ep-person-copy,
+  .ep-person-page-copy {
+    text-align: left;
+  }
+}
