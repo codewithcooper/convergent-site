@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 import "./premium.css";
+import "./image-tuning.css";
 
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
