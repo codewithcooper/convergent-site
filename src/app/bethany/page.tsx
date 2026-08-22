@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = { title: "Bethany Cooper" };
@@ -5,13 +6,32 @@ export const metadata = { title: "Bethany Cooper" };
 export default function BethanyPage() {
   return (
     <>
-      <section className="page-hero">
-        <p className="eyebrow">Heart Work Coach · Speaker · Leader</p>
-        <h1>Bethany Cooper</h1>
-        <p className="lede">
-          Helping people do the inner work that creates healthier relationships,
-          deeper self-awareness, and lasting growth.
-        </p>
+      <section className="ep-person-page-hero bethany">
+        <div className="ep-person-page-copy">
+          <p className="eyebrow">Heart Work Coach · Speaker · Leader</p>
+          <h1>Bethany Cooper</h1>
+          <p className="lede">
+            Helping people do the inner work that creates healthier relationships,
+            deeper self-awareness, and lasting growth.
+          </p>
+          <div className="hero-actions">
+            <Link className="button" href="/speaking">
+              Book Bethany to speak
+            </Link>
+            <Link className="button secondary" href="/contact">
+              Connect with Bethany
+            </Link>
+          </div>
+        </div>
+        <div className="ep-person-page-image">
+          <Image
+            src="/images/bethany-cooper.jpg"
+            alt="Bethany Cooper"
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 48vw"
+          />
+        </div>
       </section>
       <section className="section">
         <div className="content-grid">
@@ -32,14 +52,6 @@ export default function BethanyPage() {
               women&apos;s events, retreats, podcasts, and conversations centered
               on relationships and personal growth.
             </p>
-            <div className="hero-actions">
-              <Link className="button" href="/speaking">
-                Book Bethany to speak
-              </Link>
-              <Link className="button secondary" href="/contact">
-                Connect with Bethany
-              </Link>
-            </div>
           </div>
         </div>
       </section>

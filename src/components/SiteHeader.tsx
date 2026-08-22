@@ -11,12 +11,9 @@ const links = [
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Convergent home">
-        <span className="brand-mark">C</span>
-        <span className="brand-copy">
-          <strong>CONVERGENT</strong>
-          <small>Consulting Group</small>
-        </span>
+      <Link className="brand ep-brand" href="/" aria-label="Convergent home">
+        <span className="ep-brand-word">CONVERGENT</span>
+        <span className="ep-brand-sub">Brian + Bethany Cooper</span>
       </Link>
       <nav className="nav-links" aria-label="Primary navigation">
         {links.map(([label, href]) => (

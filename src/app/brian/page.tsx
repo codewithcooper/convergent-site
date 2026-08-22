@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = { title: "Brian Cooper" };
@@ -5,13 +6,32 @@ export const metadata = { title: "Brian Cooper" };
 export default function BrianPage() {
   return (
     <>
-      <section className="page-hero">
-        <p className="eyebrow">Speaker · Author · Pastor · Creative Consultant</p>
-        <h1>Brian Cooper</h1>
-        <p className="lede">
-          Helping people understand what matters, imagine what could be, and
-          build the next faithful thing.
-        </p>
+      <section className="ep-person-page-hero">
+        <div className="ep-person-page-copy">
+          <p className="eyebrow">Speaker · Author · Pastor · Creative Consultant</p>
+          <h1>Brian Cooper</h1>
+          <p className="lede">
+            Helping people understand what matters, imagine what could be, and
+            build the next faithful thing.
+          </p>
+          <div className="hero-actions">
+            <Link className="button" href="/speaking">
+              Book Brian to speak
+            </Link>
+            <Link className="button secondary" href="/studio">
+              Build with Brian
+            </Link>
+          </div>
+        </div>
+        <div className="ep-person-page-image">
+          <Image
+            src="/images/brian-cooper.jpg"
+            alt="Brian Cooper"
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 48vw"
+          />
+        </div>
       </section>
       <section className="section">
         <div className="content-grid">
@@ -33,14 +53,6 @@ export default function BrianPage() {
               founders shape ideas into digital products, websites, apps,
               experiences, and practical next steps.
             </p>
-            <div className="hero-actions">
-              <Link className="button" href="/speaking">
-                Book Brian to speak
-              </Link>
-              <Link className="button secondary" href="/studio">
-                Build with Brian
-              </Link>
-            </div>
           </div>
         </div>
       </section>
